@@ -826,6 +826,8 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'ArrowLeft') previousSlide();
             if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'PageUp' || e.keyCode === 33) { e.preventDefault(); previousSlide(); }
+            if (e.key === 'PageDown' || e.keyCode === 34) { e.preventDefault(); nextSlide(); }
         });
 
         // 初始化
